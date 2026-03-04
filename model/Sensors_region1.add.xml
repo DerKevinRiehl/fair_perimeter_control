@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-03-28 10:35:40 by Eclipse SUMO netedit Version 1.19.0
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <!-- Detectors -->
+    <inductionLoop id="region1_entrance_10_1" lane="-254396709#2_0" pos="143.23" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_12_1" lane="681479565_2" pos="142.54" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_12_2" lane="681479565_1" pos="142.55" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_12_3" lane="681479565_0" pos="142.48" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_12_4" lane="8920734#1_0" pos="100.10" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_14_1" lane="88597575#0_0" pos="71.29" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_14_2" lane="88597575#0_1" pos="71.46" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_16_1" lane="397152177#1_1" pos="153.39" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_16_2" lane="397152177#1_2" pos="153.57" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_17_1" lane="32931798#1_0" pos="124.64" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_17_2" lane="32931798#1_1" pos="125.28" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_1_1" lane="-8916563#2_0" pos="205.93" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_1_2" lane="417099320#1_0" pos="92.73" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_1_3" lane="417099320#1_1" pos="92.80" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_2_1" lane="-399156532#1_0" pos="103.71" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_3_1" lane="706545923#2_0" pos="102.74" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_3_2" lane="706545923#2_1" pos="102.45" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_4_1" lane="598020855#1_1" pos="142.75" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_4_2" lane="598020855#1_0" pos="142.65" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_6_1" lane="598743249#1_1" pos="17.20" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_6_2" lane="598743249#1_0" pos="17.13" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_entrance_8_1" lane="27054209#0_0" pos="142.98" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_10_1" lane="254396709#1_0" pos="2.75" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_11_1" lane="254971067#1_0" pos="3.54" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_11_2" lane="254971067#1_1" pos="3.67" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_11_3" lane="254971067#1_2" pos="3.40" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_11_4" lane="254971067#1_3" pos="4.04" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_12_1" lane="-8920734#1_0" pos="2.82" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_13_1" lane="91181774#0_0" pos="8.65" period="300.00" file="NUL"/>
+    <inductionLoop id="region1_exit_13_2" lane="91181774#0_1" pos="8.05" period="300.00" file="NUL"/>
+    <inductionLoop id="region1_exit_13_3" lane="91181774#0_2" pos="7.18" period="300.00" file="NUL"/>
+    <inductionLoop id="region1_exit_13_4" lane="91181774#0_3" pos="7.37" period="300.00" file="NUL"/>
+    <inductionLoop id="region1_exit_15_1" lane="88597563#0_3" pos="9.28" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_15_2" lane="88597563#0_2" pos="9.92" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_15_3" lane="88597563#0_1" pos="9.68" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_15_4" lane="88597563#0_0" pos="9.89" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_16_1" lane="224199013#0_0" pos="71.40" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_17_1" lane="8922560#2_1" pos="5.04" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_17_2" lane="8922560#2_0" pos="5.34" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_1_1" lane="682030989#1_0" pos="4.29" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_1_2" lane="-682030988#0_1" pos="6.63" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_1_3" lane="-682030988#0_0" pos="6.30" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_2_1" lane="399156532#0_0" pos="3.17" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_4_1" lane="254971070#1_0" pos="3.73" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_4_2" lane="254971070#1_1" pos="4.17" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_4_3" lane="-87376675#0_0" pos="2.46" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_4_4" lane="-87376675#0_1" pos="2.26" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_5_1" lane="224384020#1_0" pos="2.06" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_7_1" lane="513676822#1_0" pos="4.93" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_7_2" lane="513676822#1_1" pos="5.40" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_7_3" lane="513676822#1_2" pos="5.17" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_9_1" lane="254756525#1_0" pos="3.17" period="90.00" file="NUL"/>
+    <inductionLoop id="region1_exit_9_2" lane="254756525#1_1" pos="3.30" period="90.00" file="NUL"/>
+    <laneAreaDetector id="region1_inqueue_10_1" lane="-254396709#2_0" pos="96.23" length="50.00" period="90.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region1_inqueue_12_1" lane="681479565_2" pos="95.69" length="50.00" period="90.00" file="NUL"/>
+    <laneAreaDetector id="region1_inqueue_12_2" lane="681479565_1" pos="95.69" length="50.00" period="90.00" file="NUL"/>
+    <laneAreaDetector id="region1_inqueue_12_3" lane="681479565_0" pos="95.69" length="50.00" period="90.00" file="NUL"/>
+    <laneAreaDetector id="region1_inqueue_12_4" lane="8920734#1_0" pos="52.80" length="50.00" period="90.00" file="NUL"/>
+    <laneAreaDetector id="region1_inqueue_14_1" lane="88597575#0_0" pos="26.27" length="50.00" period="90.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region1_inqueue_14_2" lane="88597575#0_1" pos="26.27" length="50.00" period="90.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region1_inqueue_16_1" lane="397152177#1_1" pos="106.80" length="50.00" period="90.00" file="NUL"/>
+    <laneAreaDetector id="region1_inqueue_16_2" lane="397152177#1_2" pos="106.80" length="50.00" period="90.00" file="NUL"/>
+    <laneAreaDetector id="region1_inqueue_17_1" lane="32931798#1_0" pos="79.44" length="50.00" period="90.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region1_inqueue_17_2" lane="32931798#1_1" pos="79.44" length="50.00" period="90.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region1_inqueue_1_1" lane="-8916563#2_0" pos="161.30" length="50.00" period="90.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region1_inqueue_1_2" lane="417099320#1_0" pos="49.93" length="50.00" period="90.00" file="NUL"/>
+    <laneAreaDetector id="region1_inqueue_1_3" lane="417099320#1_1" pos="49.93" length="50.00" period="90.00" file="NUL"/>
+    <laneAreaDetector id="region1_inqueue_2_1" lane="-399156532#1_0" pos="56.68" length="50.00" period="90.00" file="NUL"/>
+    <laneAreaDetector id="region1_inqueue_3_1" lane="706545923#2_0" pos="56.47" length="50.00" period="90.00" file="NUL"/>
+    <laneAreaDetector id="region1_inqueue_3_2" lane="706545923#2_1" pos="56.47" length="50.00" period="90.00" file="NUL"/>
+    <laneAreaDetector id="region1_inqueue_4_1" lane="598020855#1_1" pos="95.72" length="50.00" period="90.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region1_inqueue_4_2" lane="598020855#1_0" pos="95.72" length="50.00" period="90.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region1_inqueue_6_1" lane="425516651#0_1" pos="60.48" length="50.00" period="90.00" file="NUL"/>
+    <laneAreaDetector id="region1_inqueue_6_2" lane="425516651#0_0" pos="60.76" length="50.00" period="90.00" file="NUL"/>
+    <laneAreaDetector id="region1_inqueue_8_1" lane="27054209#0_0" pos="96.05" length="50.00" period="90.00" file="NUL"/>
+</additional>

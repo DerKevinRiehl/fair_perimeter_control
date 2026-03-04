@@ -1,0 +1,6 @@
+python==3.12.5
+traci==1.22.0
+eclipse-sumo==1.22.0
+pandas==2.2.3
+numpy==2.2.2
+matplotlib==3.8.3

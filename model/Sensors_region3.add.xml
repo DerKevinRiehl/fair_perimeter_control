@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-03-28 10:54:59 by Eclipse SUMO netedit Version 1.19.0
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <!-- Detectors -->
+    <inductionLoop id="region3_entrance_16_1" lane="224200968#0_0" pos="11.04" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_17_1" lane="8922560#2_1" pos="3.20" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_17_2" lane="8922560#2_0" pos="3.01" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_18_1" lane="359898622#0_2" pos="94.24" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_18_2" lane="359898622#0_1" pos="95.55" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_18_3" lane="359898622#0_0" pos="94.46" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_19_1" lane="397270776#0_2" pos="96.34" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_19_2" lane="397270776#0_1" pos="95.69" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_19_3" lane="397270776#0_0" pos="96.82" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_1_1" lane="-682030988#0_1" pos="2.08" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_1_2" lane="-682030988#0_0" pos="1.51" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_20_1" lane="-681699528#1_1" pos="101.20" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_20_2" lane="-681699528#1_0" pos="101.44" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_21_1" lane="769783926#1_1" pos="135.49" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_21_2" lane="769783926#1_0" pos="135.02" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_22_1" lane="-8916551#1_0" pos="56.25" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_23_1" lane="254299117#1_3" pos="136.88" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_23_2" lane="254299117#1_2" pos="136.89" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_23_3" lane="254299117#1_1" pos="136.90" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_23_4" lane="254299117#1_0" pos="136.44" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_24_1" lane="-8919405#2_0" pos="275.40" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_25_1" lane="-225518512#0_1" pos="67.11" period="300.00" file="NUL" friendlyPos="1"/>
+    <inductionLoop id="region3_entrance_25_2" lane="-225518512#0_0" pos="67.10" period="300.00" file="NUL" friendlyPos="1"/>
+    <inductionLoop id="region3_entrance_25_3" lane="-88559702#0_1" pos="35.12" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_25_4" lane="-88559702#0_0" pos="35.24" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_26_1" lane="329607867#1_1" pos="195.35" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_26_2" lane="329607867#1_0" pos="194.72" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_27_1" lane="468201423#2_1" pos="10.25" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_27_2" lane="468201423#2_0" pos="10.54" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_27_3" lane="283537380#1_1" pos="18.03" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_27_4" lane="283537380#1_0" pos="15.46" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_27_5" lane="468201422#2_1" pos="12.21" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_27_6" lane="468201422#2_0" pos="12.34" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_28_1" lane="-682727088#1_1" pos="83.55" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_28_2" lane="-682727088#1_0" pos="83.28" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_29_1" lane="27398032#1_0" pos="168.14" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_29_2" lane="619027325_0" pos="2.45" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_29_3" lane="619027325_1" pos="2.52" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_29_4" lane="120813417_0" pos="71.46" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_29_5" lane="120813417_1" pos="71.69" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_29_6" lane="120813417_2" pos="72.05" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_29_7" lane="120813417_3" pos="72.29" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_29_8" lane="120813417_4" pos="72.14" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_29_9" lane="120813417_5" pos="71.93" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_30_1" lane="-27397692#1_1" pos="74.77" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_30_2" lane="-27397692#1_0" pos="73.85" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_30_3" lane="-35675861#0_0" pos="214.91" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_31_1" lane="468205096#1_1" pos="105.01" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_31_2" lane="468205096#1_0" pos="105.59" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_32_1" lane="-684030185#1_2" pos="49.31" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_32_2" lane="-684030185#1_1" pos="49.41" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_32_3" lane="-684030185#1_0" pos="49.12" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_33_1" lane="408575055#1_1" pos="106.15" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_33_2" lane="408575055#1_0" pos="106.21" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_X_1" lane="513706009_3" pos="67.54" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_X_2" lane="513706009_2" pos="67.36" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_X_3" lane="513706009_1" pos="68.03" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_entrance_X_4" lane="513706009_0" pos="67.66" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_17_1" lane="32931798#1_0" pos="125.53" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_17_2" lane="32931798#1_1" pos="125.83" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_18_1" lane="417099361#1_0" pos="4.41" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_18_2" lane="417099361#1_1" pos="5.25" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_18_3" lane="417099361#1_2" pos="5.28" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_19_1" lane="681699526#1_0" pos="3.48" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_19_2" lane="681699526#1_1" pos="3.62" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_1_1" lane="417099320#1_0" pos="98.40" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_1_2" lane="417099320#1_1" pos="98.35" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_20_1" lane="681699528#1_0" pos="3.15" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_21_1" lane="-769783926#2_0" pos="3.26" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_21_2" lane="-769783926#2_1" pos="2.62" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_22_1" lane="8916551#0_0" pos="3.16" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_24_1" lane="8919405#0_0" pos="1.47" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_25_1" lane="225518512#0_0" pos="2.72" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_25_2" lane="225518512#0_1" pos="3.95" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_25_3" lane="88559702#0_0" pos="4.70" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_25_4" lane="88559702#0_1" pos="5.50" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_25_5" lane="88559702#0_2" pos="5.14" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_28_1" lane="682727088#1_0" pos="4.71" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_28_2" lane="682727088#1_1" pos="5.14" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_29_1" lane="-467630604_0" pos="189.94" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_29_2" lane="468201421_1" pos="138.08" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_29_3" lane="468201421_0" pos="139.97" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_29_4" lane="27772070#1_1" pos="178.74" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_29_5" lane="27772070#1_0" pos="179.91" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_29_61" lane="123741452_3" pos="90.10" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_29_62" lane="123741452_2" pos="89.59" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_29_63" lane="123741452_1" pos="88.96" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_29_64" lane="123741452_0" pos="88.34" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_29_7" lane="661905445_1" pos="121.96" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_29_8" lane="661905445_0" pos="122.04" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_30_1" lane="27397692#1_0" pos="2.77" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_30_2" lane="99231468#1_0" pos="2.16" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_30_3" lane="99231468#1_1" pos="2.66" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_30_4" lane="99231468#1_2" pos="2.44" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_31_1" lane="-468205097#0_0" pos="3.13" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_31_2" lane="-468205097#0_1" pos="2.93" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_32_1" lane="99231475#1_0" pos="2.44" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_32_2" lane="99231475#1_1" pos="2.13" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_33_1" lane="-111560682#1_0" pos="3.78" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_33_2" lane="-111560682#1_1" pos="3.32" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_X_1" lane="202485364_0" pos="424.45" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_X_2" lane="202485364_1" pos="424.12" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_X_3" lane="202485364_2" pos="424.36" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_X_4" lane="202485364_3" pos="423.71" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_X_5" lane="619027325_0" pos="424.55" period="300.00" file="NUL"/>
+    <inductionLoop id="region3_exit_X_6" lane="619027325_1" pos="424.05" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_16_1" lane="224200968#0_0" pos="55.54" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_17_1" lane="682030990#0_0" pos="152.99" length="50.00" period="300.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region3_inqueue_17_2" lane="254756521#7_0" pos="51.90" length="50.00" period="300.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region3_inqueue_18_1" lane="359898622#0_2" pos="46.26" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_19_1" lane="397270776#0_2" pos="49.01" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_19_2" lane="397270776#0_1" pos="48.92" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_19_3" lane="397270776#0_0" pos="49.31" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_1_1" lane="-399156530#2_1" pos="54.50" length="50.00" period="300.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region3_inqueue_1_2" lane="-399156530#2_0" pos="54.50" length="50.00" period="300.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region3_inqueue_1_3" lane="8922024#0_0" pos="151.39" length="50.00" period="300.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region3_inqueue_20_1" lane="-681699528#1_1" pos="52.69" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_20_2" lane="-681699528#1_0" pos="53.40" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_21_1" lane="769783926#1_1" pos="87.70" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_21_2" lane="769783926#1_0" pos="88.18" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_22_1" lane="-8916551#1_0" pos="9.09" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_23_1" lane="254299117#1_3" pos="89.20" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_23_2" lane="254299117#1_2" pos="89.42" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_23_3" lane="254299117#1_1" pos="89.07" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_23_4" lane="254299117#1_0" pos="89.30" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_24_1" lane="-8919405#2_0" pos="227.28" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_25A_1" lane="-225518512#3_1" pos="89.69" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_25A_2" lane="-225518512#3_0" pos="89.69" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_25B_1" lane="-850242477#1_1" pos="49.96" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_25B_2" lane="-850242477#1_0" pos="49.97" length="50.00" period="300.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region3_inqueue_26_1" lane="329607867#1_1" pos="147.48" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_26_2" lane="329607867#1_0" pos="146.64" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_27A_1" lane="468201423#0_1" pos="51.76" length="50.00" period="300.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region3_inqueue_27A_2" lane="468201423#0_0" pos="51.76" length="50.00" period="300.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region3_inqueue_27B_1" lane="283537380#0_1" pos="31.32" length="50.00" period="300.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region3_inqueue_27B_2" lane="283537380#0_0" pos="31.32" length="50.00" period="300.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region3_inqueue_27C_1" lane="468201422#1_1" pos="6.30" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_27C_2" lane="468201422#1_0" pos="6.30" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_28_1" lane="-682727088#1_1" pos="37.10" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_28_2" lane="-682727088#1_0" pos="37.06" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_29_1" lane="120813417_0" pos="23.89" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_29_2" lane="120813417_1" pos="24.63" length="50.00" period="300.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region3_inqueue_29_3" lane="120813417_2" pos="24.60" length="50.00" period="300.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region3_inqueue_29_4" lane="120813417_3" pos="24.92" length="50.00" period="300.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region3_inqueue_29_5" lane="120813417_4" pos="25.17" length="50.00" period="300.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region3_inqueue_29_6" lane="120813417_5" pos="25.17" length="50.00" period="300.00" file="NUL" friendlyPos="1"/>
+    <laneAreaDetector id="region3_inqueue_30_1" lane="-27397692#1_1" pos="27.59" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_30_2" lane="-27397692#1_0" pos="26.68" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_30_3" lane="-35675861#0_0" pos="167.84" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_31_1" lane="468205096#1_1" pos="58.34" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_31_2" lane="468205096#1_0" pos="58.34" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_32_1" lane="-684030185#1_2" pos="0.17" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_32_2" lane="-684030185#1_1" pos="0.17" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_32_3" lane="-684030185#1_0" pos="0.17" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_33_1" lane="408575055#1_1" pos="58.98" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_33_2" lane="408575055#1_0" pos="58.98" length="50.00" period="300.00" file="NUL"/>
+    <laneAreaDetector id="region3_inqueue_Z_1" lane="684024428_0" pos="29.91" length="50.00" period="300.00" file="NUL"/>
+</additional>

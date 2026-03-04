@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-12-12 08:27:32 by Eclipse SUMO sumo Version 1.19.0 -->
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <!-- SIMULATION SETTINGS -->
+    <time>
+        <begin value="0"/>
+        <end value="86400"/> <!-- 24h -->
+    </time>
+    
+    <!-- PROCESSING OPTIONS -->
+    <processing>
+        <step-length value="1"/> <!-- Quarter Seconds -->
+        <time-to-teleport value="-1"/> <!-- Disable Teleportation -->
+		<ignore-junction-blocker value="60" />
+		<summary-output.period value="300"/>
+    </processing>
+    
+    <!-- INPUT FILES -->
+    <input>
+        <net-file value="SFO.net.xml"/>
+        <route-files value="DefaultRoutes.rou.xml"/>
+		<additional-files value="region_edge_logging.xml,Sensors_region1.add.xml,Sensors_region2.add.xml,Sensors_region3.add.xml"/> 
+    </input>
+	
+    <!-- OUTPUT FILES -->
+	<output>
+		<summary-output value="logs/Log_summary.xml"/>
+	</output>
+	<!--
+	<output>
+		<emission-output value="logs/Emissions.xml" />
+	    <tripinfo-output value="logs/TripInfos.xml" write-unfinished="true"/>
+		<summary-output value="logs/Log_summary.xml"/>
+	</output>
+	-->
+    <report>
+        <verbose value="true"/>
+        <no-step-log value="true"/>
+    </report>
+	
+</configuration>
