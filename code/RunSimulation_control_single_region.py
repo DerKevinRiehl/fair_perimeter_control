@@ -1,3 +1,9 @@
+"""
+Distributive Perimetral Queue Balancing Mechanisms: towards Equitable Urban Traffic Gating and Fair Perimeter Control [2026]
+Authors: Kevin Riehl <kriehl@ethz.ch>
+Organisation: ETH Zürich, Institute for Transport Planning and Systems (IVT)
+"""
+
 # #############################################################################
 # ## IMPORTS
 # #############################################################################
@@ -28,8 +34,8 @@ SUMO_DEMAND_FILE = "../model/demand_scenarios/demand_2136_reduced.zip"
 SIMULATION_WAIT_TIME = 0.0 # 0.1
 SIMULATION_DURATION = 86400 + 7000 # 0.1
 #### LOGGING OPTIONS
-SHOULD_LOG_FLOW = False
-FLOW_LOG_FILE = "../model/logs/log_region_flow.txt"
+SHOULD_LOG_FLOW = True
+LOG_FILE_FLOW = "../model/logs/log_region_flow.txt"
 #### CONTROL-SPECIFIC
 region = "region_1"
 
@@ -46,7 +52,7 @@ control_state = fpc_library.init_control_state(region)
 control_history = fpc_library.init_control_history(region)
 #### START SUMO
 traci.start([SUMO_BINARY, "-c", SUMO_CONFIG, "--start", "--quit-on-end", "--time-to-teleport", "-1"])
-fpc_library.createFlowLogHead(SHOULD_LOG_FLOW, FLOW_LOG_FILE)
+fpc_library.createFlowLogHead(SHOULD_LOG_FLOW, LOG_FILE_FLOW)
 for time_ctr in range(0, SIMULATION_DURATION):
     # SPAWN CARS
     fpc_library.spawn_vehicles(demand_model, time_ctr)            
@@ -55,7 +61,7 @@ for time_ctr in range(0, SIMULATION_DURATION):
     time.sleep(SIMULATION_WAIT_TIME)
     # DETERMINE STATE (SYSTEM)
     system_state, flow_information = fpc_library.measure_system_state(system_state)
-    fpc_library.generateFlowLogEntry(SHOULD_LOG_FLOW, FLOW_LOG_FILE, time_ctr, system_state, flow_information)
+    fpc_library.generateFlowLogEntry(SHOULD_LOG_FLOW, LOG_FILE_FLOW, time_ctr, system_state, flow_information)
     # DETERMINE STATE (CONTROL)
     if (time_ctr-0) % fpc_constants.sensor_params["SENSOR_PERIOD"]==0:
         control_state, control_history = fpc_library.update_control_state(control_state, control_history, region, system_state, time_ctr)

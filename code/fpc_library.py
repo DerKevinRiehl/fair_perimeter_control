@@ -1,3 +1,9 @@
+"""
+Distributive Perimetral Queue Balancing Mechanisms: towards Equitable Urban Traffic Gating and Fair Perimeter Control [2026]
+Authors: Kevin Riehl <kriehl@ethz.ch>
+Organisation: ETH Zürich, Institute for Transport Planning and Systems (IVT)
+"""
+
 ###############################################################################
 #### IMPORTS
 ###############################################################################
@@ -213,7 +219,41 @@ def actuate_entering_rates_in_region(region, control_state):
                 controller=controller,
                 green_share=green_share
             )
-            
+
+def actuate_allocative_entering_rates_in_region(region, period_duration, alloc_dict):
+    region_alloc = alloc_dict[region]
+    actuators = fpc_constants.actuators
+    for intersection, green_share in region_alloc.items():
+        # skip irrelevant intersections
+        if not actuators[f"{region}_relevance"][intersection]:
+            continue
+        # simple (single-control) case
+        if intersection not in actuators["multi_control_intersection"]:
+            controller = actuators[region][intersection]
+            set_traffic_light_green_time_share(
+                region=region,
+                period_duration=period_duration,
+                controller=controller,
+                green_share=green_share,
+            )
+            continue
+        # multi-control case
+        region_a, region_b = actuators["multi_control_intersection"][intersection]
+        if intersection in actuators["phase_shift"][region_b]:
+            green_share_a = alloc_dict[region_a][intersection]
+            green_share_b = alloc_dict[region_b][intersection]
+        else:
+            green_share_a = alloc_dict[region_b][intersection]
+            green_share_b = alloc_dict[region_a][intersection]
+        controller = actuators[region][intersection]
+        set_traffic_light_green_time_share(
+            region=region,
+            period_duration=period_duration,
+            controller=controller,
+            green_share=green_share_a,
+            green_share2=green_share_b,
+        )
+                
 def init_system_state():
     system_state = {}
     for region in fpc_constants.regions:
@@ -240,7 +280,15 @@ def init_control_history(region):
         return {r: base.copy() for r in fpc_constants.regions}
     else:
         return {region: base.copy()}
-    
+
+def init_fairness_state():
+    inter_greenshare = {
+        "region_1": {"entering_rate" : 0},
+        "region_2": {"entering_rate" : 0},
+        "region_3": {"entering_rate" : 0},
+    }    
+    return inter_greenshare
+
 def measure_system_state(system_state):
     flow_information = {}
     for region in fpc_constants.regions:
@@ -262,6 +310,30 @@ def update_control_history(control_state, control_history, region, time_ctr):
     control_history[region]["n_vehicles"].append([time_ctr, control_state[region]["entering_rate"]])     
     return control_state, control_history
 
+def measure_queue_state():
+    max_queue_lengths = {}
+    mean_speeds = {}
+    time_losses = {}
+    for region in fpc_constants.regions:
+        if region not in mean_speeds:
+            max_queue_lengths[region] = []
+            mean_speeds[region] = []
+            time_losses[region] = []
+        qles = []
+        spds = []
+        lsss = []
+        for inter in fpc_constants.sensors["queue_lenght"][region]:
+            for sensor in fpc_constants.sensors["queue_lenght"][region][inter]:
+                qles.append(traci.lanearea.getLastIntervalMaxJamLengthInMeters(sensor))
+                spds.append(traci.lanearea.getLastIntervalMeanSpeed(sensor))
+                vehnum = traci.lanearea.getLastIntervalVehicleNumber(sensor)
+                occupa = traci.lanearea.getLastIntervalOccupancy(sensor)
+                lsss.append(occupa * 3600 / vehnum if vehnum > 0 else 0.0)#(traci.lanearea.getLastIntervalMeanTimeLoss(sensor))
+        max_queue_lengths[region].append(qles)
+        mean_speeds[region].append(spds)
+        time_losses[region].append(lsss)
+    return max_queue_lengths, mean_speeds, time_losses
+    
 
 
 
@@ -296,7 +368,50 @@ def proportional(reqs, avail):
     # case : proportional (to the requests) allocation
     allo = [(req / total_req) * total_res for req in reqs]
     return allo
+
+def maxmin(reqs, avail):
+    n = len(reqs)
+    if avail <= 0:
+        return [0.0] * n
     
+    total_req = sum(reqs)
+    if total_req <= avail:
+        return [float(r) for r in reqs]
+    
+    # Step 1: Sort requests with indices (ascending)
+    remains = sorted([(float(reqs[i]), i) for i in range(n)])
+    allo = [0.0] * n
+    total_res = float(avail)
+    
+    while remains:
+        # Step 2a: Equal share of remaining budget
+        num_remains = len(remains)
+        rho = total_res / num_remains
+        
+        # Step 2b: Satisfy all where request <= rho
+        satisfied = []
+        for req, i in remains:
+            if req <= rho:
+                allo[i] = req  # Full request
+                total_res -= req
+                satisfied.append((req, i))
+            else:
+                # Keep remaining (those > rho)
+                break
+        
+        # Remove satisfied ones
+        remains = remains[len(satisfied):]
+        
+        # Step 2c: If none satisfied, give rho to all remaining and stop
+        if not satisfied and remains:
+            for req, i in remains:
+                allo[i] = rho
+            total_res = 0
+            break
+    
+    return allo
+    
+"""
 def maxmin(reqs, avail):
     n = len(reqs)
     allo = [0] * n
@@ -334,3 +449,117 @@ def maxmin(reqs, avail):
                 allo[rem[1]] = share
             total_res = 0
     return allo
+"""
+
+def distribution_fair(regions, control_state, inter_greenshare, al_rule):
+    # dict to keep data for intermediate actuation
+    # basically just keeps track of how much greetimeshare is still allowed
+    intermediate_actuation = {}
+    intersection_green = {} # assigned greenshare per intersection in region
+    for region in regions:       
+        intermediate_act_region = {}
+        alloc_dict = {}
+        # if max greenshare -> assign all at beginning
+        if control_state[region]["entering_rate"] == fpc_constants.control_params["GREEN_MAX"]:
+            for intersection in fpc_constants.actuators[f"{region}_relevance"]:
+                alloc_dict[intersection] = fpc_constants.control_params["GREEN_MAX"]
+                intermediate_act_region[intersection] = {'free': 0}
+            inter_greenshare[region]["entering_rate"] = 0
+            intersection_green[region] = alloc_dict
+            intermediate_actuation[region] = {}
+            continue
+        rel_inter = []
+        for intersection in fpc_constants.actuators[f"{region}_relevance"]:
+            # if multicontrolintersection -> max
+            if fpc_constants.actuators[f"{region}_relevance"][intersection] and intersection not in fpc_constants.actuators["multi_control_intersection"]:
+                rel_inter.append(intersection)
+            elif fpc_constants.actuators[f"{region}_relevance"][intersection] and intersection in fpc_constants.actuators["multi_control_intersection"]:
+                alloc_dict[intersection] = control_state[region]["entering_rate"]
+            queue_list = []
+            inter_list = []
+            n_queues = 0 # number queues in region
+            lines_intersection = {} #number of queues at an intersection
+        for intersection in rel_inter:
+            # number of queues at intersection rel_inter
+            inter_queues = len(fpc_constants.sensors['queue_length'][region][intersection])
+            n_queues += inter_queues
+            lines_intersection[intersection] = inter_queues
+            # determine max lenght at itersection -> all traffic lines at this intersection request the maximum
+            max_length = 0
+            for i in range(inter_queues):
+                inter_list.append(intersection)
+                det_id = fpc_constants.sensors['queue_length'][region][intersection][i]
+                queue_length = traci.lanearea.getLastStepHaltingNumber(det_id)
+                # if whole detector is occupied -> request all
+                if queue_length >= traci.lanearea.getLength(det_id) / 7.0: # car length is 5 but include distance between them
+                    queue_length = 26
+                max_length = max(max_length, queue_length)
+            # adds intersection max_length times to
+            queue_list += [fpc_constants.queue_perc_map[max_length]]*lines_intersection[intersection]
+        total_durs = n_queues * control_state[region]["entering_rate"]
+        alloc_green = allocation_rule(al_rule, queue_list, total_durs)
+        total_alloc = sum(alloc_green)
+        for i, intersection in enumerate(inter_list):
+            if intersection not in alloc_dict:
+                green_share = alloc_green[i]
+                alloc_dict[intersection] = green_share
+                # checks if intermediate activation is possible
+                if intersection not in fpc_constants.actuators["multi_control_intersection"]:
+                    intermediate_act_region[intersection] = {'free': fpc_constants.control_params["GREEN_MAX"] - green_share}
+        # saves greenshares and leftover greenshare
+        intersection_green[region] = alloc_dict
+        #inter_greenshare[region]["entering_rate"] = (total_durs-total_alloc)/n_queues
+        inter_greenshare[region]["entering_rate"] = total_durs-total_alloc
+        intermediate_actuation[region] = intermediate_act_region
+    return intersection_green, intermediate_actuation, inter_greenshare
+
+def distribution_intermediate(allowed_act, inter_greenshare, al_rule):
+	intersection_green = {}
+	for region in allowed_act:
+		if inter_greenshare[region]["entering_rate"] <= 0: # region does not have greenshare left
+			continue
+		n_queues = 0
+		queue_list = []
+		inter_list = []
+		lines_intersection = {}
+		alloc_dict = {}
+		for intersection in  allowed_act[region]:
+			#print(allowed_act)
+			if allowed_act[region][intersection]['free'] <= 0: # no greeshare left for this intersection
+				continue
+			#determine which phase is red:
+			''' if 45 sec checks -> no light shcoud be in greenphase anymore :)
+			if intersection in actuators["phase_shift"][region]:
+				r = 2
+			else:
+				r = 0
+			#print(traci.trafficlight.getPhase(actuators[region][intersection]) == r)
+			if traci.trafficlight.getPhase(actuators[region][intersection]) != r: # traffic light currently in greenphase
+				continue
+            '''
+			inter_queues = len(fpc_constants.sensors['queue_length'][region][intersection])
+			n_queues += inter_queues
+			lines_intersection[intersection] = inter_queues
+			max_length = 0
+			for i in range(inter_queues):
+				inter_list.append(intersection)
+				det_id = fpc_constants.sensors['queue_length'][region][intersection][i]
+				queue_length = traci.lanearea.getLastStepHaltingNumber(det_id)
+				# if whole detector is occupied -> request all
+				if queue_length >= traci.lanearea.getLength(det_id) / 7.0: # car length is 5 but include distance between them
+					queue_length = 26
+				max_length = max(max_length, queue_length)
+			req_perc = min(fpc_constants.queue_perc_map[max_length], allowed_act[region][intersection]['free']) # adjusts requested to maximum allowed
+			queue_list += [req_perc]*lines_intersection[intersection]
+		alloc_green = allocation_rule(al_rule, queue_list, inter_greenshare[region]["entering_rate"])
+		total_alloc = sum(alloc_green)
+		for i, intersection in enumerate(inter_list):
+			if intersection not in alloc_dict:
+				green_share = alloc_green[i]
+				alloc_dict[intersection] = green_share
+				# checks if intermediate activation is possible
+				if intersection not in fpc_constants.actuators["multi_control_intersection"]:
+					allowed_act[region][intersection]['free'] -= green_share
+		intersection_green[region] = alloc_dict
+		inter_greenshare[region]["entering_rate"] -= total_alloc
+	return intersection_green, allowed_act, inter_greenshare

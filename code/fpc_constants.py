@@ -1,10 +1,17 @@
+"""
+Distributive Perimetral Queue Balancing Mechanisms: towards Equitable Urban Traffic Gating and Fair Perimeter Control [2026]
+Authors: Kevin Riehl <kriehl@ethz.ch>
+Organisation: ETH Zürich, Institute for Transport Planning and Systems (IVT)
+"""
+
 ###############################################################################
 #### CONSTANTS
 ###############################################################################
 
 #### SENSING PARAMS
 sensor_params = {
-    "SENSOR_PERIOD": 90
+    "SENSOR_PERIOD": 90,
+    "QUEUE_SENSING": 300,
 }
 
 #### CONTROL PARAMS
