@@ -23,7 +23,7 @@ This is the online repository of *"Distributive Perimetral Queue Balancing Mecha
 
 <table>
     <tr>
-        <td style="width:50%; vertical-align:top;">
+        <td style="width:65%; vertical-align:top;">
 Perimeter control is an effective, urban traffic management strategy that regulates inflow to congested urban regions using aggregate network dynamics. While existing approaches primarily optimize system-level efficiency, such as total travel time or network throughput, they often overlook equity considerations, leading to uneven delay distributions across entry points and user groups. 
 
 This work integrates fairness objectives into perimeter control design through explicit queue balancing mechanisms.
@@ -33,10 +33,10 @@ Building on this observation, queue balancing strategies which yield measurable 
 
 Ultimately, the proposed framework contributes toward equitable control design for emerging, intelligent transportation systems, and higher user acceptance for those. 
         </td>
-        <td style="width:50%; text-align:center; vertical-align:top;">
-<img src="figures/Figure_Animation.gif" style="width:80%;" />
-<img src="figures/Figure_1.png" style="width:50%;" />
-<img src="figures/Figure_3.png" style="width:50%;" />
+        <td style="width:35%; text-align:center; vertical-align:top;">
+<img src="figures/Figure_Animation.gif" style="width:80%;max-width:200px;" />
+<img src="figures/Figure_1.png" style="width:50%;max-width:200px;" />
+<img src="figures/Figure_3.png" style="width:50%;max-width:200px;" />
         </td>
     </tr>
 </table>
