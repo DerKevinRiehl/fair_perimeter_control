@@ -34,9 +34,9 @@ Building on this observation, queue balancing strategies which yield measurable 
 Ultimately, the proposed framework contributes toward equitable control design for emerging, intelligent transportation systems, and higher user acceptance for those. 
         </td>
         <td style="width:50%; text-align:center; vertical-align:top;">
-<img src="figures/Figure_Animation.gif" style="width:100%;" />
-<img src="figures/Figure_1.png" style="width:80%;" />
-<img src="figures/Figure_3.png" style="width:80%;" />
+<img src="figures/Figure_Animation.gif" style="width:80%;" />
+<img src="figures/Figure_1.png" style="width:50%;" />
+<img src="figures/Figure_3.png" style="width:50%;" />
         </td>
     </tr>
 </table>
